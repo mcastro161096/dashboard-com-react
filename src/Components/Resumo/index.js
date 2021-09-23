@@ -20,6 +20,12 @@ class Resumo extends Component {
                 }
         }
     }
+
+    componentDidMount(){
+        fetch("http://www.devup.com.br/php/api-dashboard/api/resumo")
+        .then(response => response.json().then(dados => this.setState(dados)));
+    }
+
     render() {
         return (
             <div>
@@ -43,7 +49,7 @@ class Resumo extends Component {
             <div className="col">
                 <div className="card mt-2 text-center">
                     <div className="card-header">
-                        Pr?ximos 30 dias
+                        Próximos 30 dias
                     </div>
                     <div className="card-body">
                         { this.state.consultas.consultas_30dias_posteriores }
@@ -74,7 +80,7 @@ class Resumo extends Component {
             <div className="col">
                 <div className="card mt-2 text-center">
                     <div className="card-header">
-                        Pr?ximos 30 dias
+                        Próximos 30 dias
                     </div>
                     <div className="card-body">
                         { this.state.faturamento.previsao.valor.toLocaleString("pt-BR", { style : "currency",
