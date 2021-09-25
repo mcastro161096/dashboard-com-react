@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { getFaturamento } from "../../services/faturamento";
 
 class Faturamento extends Component {
 constructor(props) {
@@ -9,8 +10,7 @@ constructor(props) {
 }
 
 componentDidMount() {
-    fetch("http://www.devup.com.br/php/api-dashboard/api/faturamento")
-    .then(data => data.json().then(detalhamento => this.setState(detalhamento)));
+    getFaturamento().then(detalhamento => this.setState(detalhamento));
 }
 
     render() {
