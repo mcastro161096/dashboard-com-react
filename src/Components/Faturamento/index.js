@@ -5,13 +5,34 @@ class Faturamento extends Component {
 constructor(props) {
     super(props);
     this.state = {
-        detalhamento :[]
+        detalhamento :[
+            {
+                "descricao": "À vista (espécie)",
+                "valor": 32.000
+            },
+            {
+                "descricao": "Cheque",
+                "valor": 2.000
+            },
+            {
+                "descricao": "Convênio",
+                "valor": 20.000
+            },
+            {
+                "descricao": "Cartão de débito",
+                "valor": 28.000
+            },
+            {
+                "descricao": "Cartão de crédito",
+                "valor": 18.000
+            }
+        ]
     };
 }
 
-componentDidMount() {
-    getFaturamento().then(detalhamento => this.setState(detalhamento));
-}
+// componentDidMount() {
+//     getFaturamento().then(detalhamento => this.setState(detalhamento));
+// }
 
     render() {
         return (

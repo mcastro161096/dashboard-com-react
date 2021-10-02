@@ -6,25 +6,25 @@ class Resumo extends Component {
         super(props);
         this.state = {
                 consultas: {
-                    consultas_30dias_anteriores: 0,
-                    consultas_30dias_posteriores: 0
+                    consultas_30dias_anteriores: 87,
+                    consultas_30dias_posteriores: 79
                 },
                 faturamento: {
                     anterior: {
-                        valor: 0,
-                        comparativo: 0
+                        valor: 100000,
+                        comparativo: 19
                     },
                     previsao: {
-                        valor: 0,
-                        comparativo: 0
+                        valor: 90000,
+                        comparativo: -10
                     }
                 }
         }
     }
 
-    componentDidMount(){
-        getResumo().then(dados => this.setState(dados));
-    }
+    // componentDidMount(){
+    //     getResumo().then(dados => this.setState(dados));
+    // }
 
     render() {
         return (

@@ -14,6 +14,7 @@ function App() {
             <div className="col">
               <Switch>
                 <Route exact path="/" component={Resumo} />
+                <Route path="/dashboard-com-react" component={Resumo} />
                 <Route path="/consultas" component={Consultas} />
                 <Route path="/faturamento" component={Faturamento} />
               </Switch>
